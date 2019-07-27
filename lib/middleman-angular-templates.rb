@@ -1,6 +1,6 @@
 require "middleman-core"
 
-class AngularTemplates < ::Middleman::Extension
+class AngularTemplates < Middleman::Extension
   option :base_dir, nil, 'Base diretory to Angular template partials'
 
   def after_configuration
@@ -31,4 +31,4 @@ class AngularTemplates < ::Middleman::Extension
 
 end
 
-AngularTemplates.register(:angular_templates)
+::Middleman::Extensions.register(:angular_templates, AngularTemplates)
